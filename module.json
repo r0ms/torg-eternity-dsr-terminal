@@ -1,0 +1,47 @@
+{
+  "id": "torg-eternity-dsr-terminal",
+  "title": "Torg Eternity DSR Terminal",
+  "version": "0.0.1",
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "Romain Bontemps",
+      "discord": "r0ms",
+      "flags": {}
+    }
+  ],
+  "flags": {
+    "canUpload": true
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "torgeternity",
+        "type": "system",
+        "compatibility": {}
+      }
+    ]
+  },
+  "action": "manageModule",
+  "esmodules": [
+    "torg-enternity-dsr-terminal.js"
+  ],  
+  "description": "Add a small terminal to create Torg Eternity Dramatic Skill Resolution on the fly and list the previous ones",
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json",
+      "flags": {}
+    }
+  ],
+  "styles": [
+    {
+      "src": "css/torg-eternity-dsr-terminal.css"
+    }
+  ]
+}

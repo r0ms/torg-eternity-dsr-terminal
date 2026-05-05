@@ -1,0 +1,93 @@
+<form class="dsr-deployment-form" autocomplete="off">
+  <input type="hidden" name="fromRestoration" value="{{formData.fromRestoration}}"/>
+  <div class="form-group-stacked">
+    <label>Mission Designation</label>
+    <input name="dsrTitle" type="text" placeholder="ENTER TITLE..." value="{{formData.dsrTitle}}" autofocus />
+  </div>
+
+  <div class="form-group-stacked">
+    <label><i class="fas fa-camera"></i> Situation Briefing</label>
+    <prose-mirror name="dsrDescription" data-collaborative="true" value="{{formData.dsrDescription}}"></prose-mirror>
+  </div>
+
+  {{#each steps as |s|}}
+  <div class="dsr-step-block">
+    <div class="step-label">[ STEP {{s}} ]</div>
+    <div class="grid-2col">
+      <div class="form-group">
+        <label>Skill</label>
+        <select name="step{{s}}Skill">
+          {{selectOptions ../skills selected=(lookup ../formData (concat "step" s "Skill")) blank="-- NO SELECTION --"
+          localize=true}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Attribute</label>
+        <select name="step{{s}}Attribute">
+          {{selectOptions ../attributes selected=(lookup ../formData (concat "step" s "Attribute")) blank="-- NONE --"
+          localize=true}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>DN</label>
+        <select name="step{{s}}DN">
+          {{selectOptions ../dnOptions selected=(lookup ../formData (concat "step" s "DN"))}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Objective</label>
+        <input name="step{{s}}Description" type="text" value="{{lookup ../formData (concat "step" s "Description")}}" />
+      </div>
+      <div class="form-group checkbox-group">
+        <input id="step{{s}}UnskillUse" name="step{{s}}UnskillUse" type="checkbox" {{checked  (lookup ../formData (concat "step" s "UnskillUse"))}}>
+        <label for="step{{s}}UnskillUse" >Unskilled Use</label>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+
+  <!-- [ LAST DITCH EFFORT ] -->
+  <div class="dsr-step-block lde-block">
+    <div class="step-label" style="color: #856704;">[ LAST DITCH EFFORT ]</div>
+  
+    <div class="form-group-stacked">
+      <label>Contingency Plan Description</label>
+      <textarea class="lde-desc" name="lastDitchEffortDescription" rows="2"
+        placeholder="Optional contingency plan...">{{formData.lastDitchEffortDescription}}</textarea>
+    </div>
+  
+    <div class="grid-2col">
+      <div class="form-group">
+        <label>Skill</label>
+        <select name="lastDitchEffortSkill">
+          {{selectOptions skills selected=formData.lastDitchEffortSkill blank="-- NO SELECTION --" localize=true}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Attribute</label>
+        <select name="lastDitchEffortAttribute">
+          {{selectOptions attributes selected=formData.lastDitchEffortAttribute blank="-- NONE --" localize=true}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>DN</label>
+        <select name="lastDitchEffortDN">
+          {{selectOptions dnOptions selected=formData.lastDitchEffortDN}}
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Test Desc</label>
+        <input name="lastDitchEffortTestDesc" type="text" value="{{formData.lastDitchEffortTestDesc}}" />
+      </div>
+    </div>
+  
+    <div class="form-group checkbox-group">
+      <input id="lastDitchEffortUnskillUse" name="lastDitchEffortUnskillUse" type="checkbox" {{checked formData.lastDitchEffortUnskillUse}}>
+      <label for="lastDitchEffortUnskillUse">Unskilled Use</label>
+    </div>
+  </div>
+</form>
+<footer class="form-footer">
+  <button type="button" data-action="broadcast"><i class="fas fa-paper-plane"></i> Send</button>
+  <button type="button" data-action="archive"><i class="fas fa-file-signature"></i> Archive</button>
+</footer>

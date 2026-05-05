@@ -1,0 +1,15 @@
+<div class="dsr-terminal-container parchment">
+  <header class="dsr-header">
+    <h2 class="torg-h2">DSR Intelligence Terminal</h2>
+  </header>
+
+  <section class="dsr-body">
+    <div class="tab {{#if (eq tabGroups.primary 'form')}}active{{/if}}" data-tab="form" data-group="primary">
+      {{> "modules/torg-eternity-dsr-terminal/templates/app/dsr-form.hbs"}}
+    </div>
+
+    <div class="tab {{#if (eq tabGroups.primary 'archives')}}active{{/if}}" data-tab="archives" data-group="primary">
+      {{> "modules/torg-eternity-dsr-terminal/templates/app/dsr-archive.hbs"}}
+    </div>
+  </section>
+</div>
