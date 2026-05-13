@@ -1,4 +1,8 @@
 import { DSRTerminalApp } from "./lib/TorgEternityDSRTerminal.js";
+let hasPrerendered = false
+const V13HTML = `<button type="checkbox" name="dsrTerminal" class="ui-control button" data-tooltip="DSR Terminal" data-tooltip-direction="LEFT">
+  <i class="fa fa-terminal" inert=""></i>
+</button>`
 
 Hooks.once("init", async () => {
   const templatePaths = [
@@ -17,13 +21,21 @@ Hooks.once('preRenderTorgControlButtons', (app, context, options) => {
   const dsrButton = {
     name: 'dsrTerminal',
     label: 'DSR Terminal',
-    icon: 'fa-solid fa-terminal',
-    type: 'button'
+    icon: 'fa fa-terminal',
+    type: 'button',
+    classes: 'ui-control'
   };
   buttons.unshift(dsrButton)
+  hasPrerendered = true
 });
 
 Hooks.on('renderTorgControlButtons', (app, html) => {
+    //v13 specific block since there is no preRenderApplicationV2 hook
+    if(!hasPrerendered){
+      const body = html.querySelector('div[data-application-part="body"]')
+      const btnHTML = foundry.utils.parseHTML(V13_HTML_CONTENT)
+      body.append(btnHTML)
+    }
     const btn = html.querySelector('button[name="dsrTerminal"]');
     if (!btn) return;
     btn.addEventListener('click', (event) => {
