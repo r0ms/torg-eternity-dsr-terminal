@@ -1,5 +1,6 @@
 <form class="dsr-deployment-form" autocomplete="off">
-  <input type="hidden" name="fromRestoration" value="{{formData.fromRestoration}}"/>
+  <input type="hidden" name="fromRestoration" value="{{formData.fromRestoration}}" />
+  <input type="hidden" name="restorationId" value="{{formData.restorationId}}" />
   <div class="form-group-stacked">
     <label>Mission Designation</label>
     <input name="dsrTitle" type="text" placeholder="ENTER TITLE..." value="{{formData.dsrTitle}}" autofocus />
@@ -36,11 +37,13 @@
       </div>
       <div class="form-group">
         <label>Objective</label>
-        <input name="step{{s}}Description" type="text" value="{{lookup ../formData (concat "step" s "Description")}}" />
+        <input name="step{{s}}Description" type="text" value="{{lookup ../formData (concat " step" s "Description"
+          )}}" />
       </div>
       <div class="form-group checkbox-group">
-        <input id="step{{s}}UnskillUse" name="step{{s}}UnskillUse" type="checkbox" {{checked  (lookup ../formData (concat "step" s "UnskillUse"))}}>
-        <label for="step{{s}}UnskillUse" >Unskilled Use</label>
+        <input id="step{{s}}UnskillUse" name="step{{s}}UnskillUse" type="checkbox" {{checked (lookup ../formData
+          (concat "step" s "UnskillUse" ))}}>
+        <label for="step{{s}}UnskillUse">Unskilled Use</label>
       </div>
     </div>
   </div>
@@ -49,13 +52,13 @@
   <!-- [ LAST DITCH EFFORT ] -->
   <div class="dsr-step-block lde-block">
     <div class="step-label" style="color: #856704;">[ LAST DITCH EFFORT ]</div>
-  
+
     <div class="form-group-stacked">
       <label>Contingency Plan Description</label>
       <textarea class="lde-desc" name="lastDitchEffortDescription" rows="2"
         placeholder="Optional contingency plan...">{{formData.lastDitchEffortDescription}}</textarea>
     </div>
-  
+
     <div class="grid-2col">
       <div class="form-group">
         <label>Skill</label>
@@ -80,14 +83,20 @@
         <input name="lastDitchEffortTestDesc" type="text" value="{{formData.lastDitchEffortTestDesc}}" />
       </div>
     </div>
-  
+
     <div class="form-group checkbox-group">
-      <input id="lastDitchEffortUnskillUse" name="lastDitchEffortUnskillUse" type="checkbox" {{checked formData.lastDitchEffortUnskillUse}}>
+      <input id="lastDitchEffortUnskillUse" name="lastDitchEffortUnskillUse" type="checkbox" {{checked
+        formData.lastDitchEffortUnskillUse}}>
       <label for="lastDitchEffortUnskillUse">Unskilled Use</label>
     </div>
   </div>
 </form>
 <footer class="form-footer">
   <button type="button" data-action="broadcast"><i class="fas fa-paper-plane"></i> Send</button>
+  {{#unless formData.fromRestoration}}
   <button type="button" data-action="archive"><i class="fas fa-file-signature"></i> Archive</button>
+  {{/unless}}
+  {{#if formData.fromRestoration}}
+  <button type="button" data-action="save"><i class="fas fa-save"></i> Save</button>
+  {{/if}}
 </footer>
