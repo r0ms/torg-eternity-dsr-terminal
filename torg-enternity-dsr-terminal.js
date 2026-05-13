@@ -33,7 +33,7 @@ Hooks.on('renderTorgControlButtons', (app, html) => {
     //v13 specific block since there is no preRenderApplicationV2 hook
     if(!hasPrerendered){
       const body = html.querySelector('div[data-application-part="body"]')
-      const btnHTML = foundry.utils.parseHTML(V13_HTML_CONTENT)
+      const btnHTML = foundry.utils.parseHTML(V13HTML)
       body.append(btnHTML)
     }
     const btn = html.querySelector('button[name="dsrTerminal"]');
