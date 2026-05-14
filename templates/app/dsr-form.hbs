@@ -2,46 +2,46 @@
   <input type="hidden" name="fromRestoration" value="{{formData.fromRestoration}}" />
   <input type="hidden" name="restorationId" value="{{formData.restorationId}}" />
   <div class="form-group-stacked">
-    <label>{{localize "dsrTermminal.FormTab.Title.Label"}}</label>
-    <input name="dsrTitle" type="text" placeholder="{{localize "dsrTermminal.FormTab.Title.Placeholder"}}" value="{{formData.dsrTitle}}" autofocus />
+    <label>{{localize "dsrTerminal.FormTab.Title.Label"}}</label>
+    <input name="dsrTitle" type="text" placeholder="{{localize "dsrTerminal.FormTab.Title.Placeholder"}}" value="{{formData.dsrTitle}}" autofocus />
   </div>
 
   <div class="form-group-stacked">
-    <label><i class="fas fa-camera"></i> {{localize "dsrTermminal.FormTab.Description.Label"}}</label>
+    <label><i class="fas fa-camera"></i> {{localize "dsrTerminal.FormTab.Description.Label"}}</label>
     <prose-mirror name="dsrDescription" data-collaborative="true" value="{{formData.dsrDescription}}"></prose-mirror>
   </div>
 
   {{#each steps as |s|}}
   <div class="dsr-step-block">
-    <div class="step-label">[ {{localize "dsrTermminal.FormTab.Step.Label"}} {{s}} ]</div>
+    <div class="step-label">[ {{localize "dsrTerminal.FormTab.Step.Label"}} {{s}} ]</div>
     <div class="grid-2col">
       <div class="form-group">
-        <label>{{localize "dsrTermminal.FormTab.Step.Skill.Label"}}</label>
+        <label>{{localize "dsrTerminal.FormTab.Step.Skill.Label"}}</label>
         <select name="step{{s}}Skill">
-          {{selectOptions ../skills selected=(lookup ../formData (concat "step" s "Skill")) blank="dsrTermminal.FormTab.Step.Select.Blank"
+          {{selectOptions ../skills selected=(lookup ../formData (concat "step" s "Skill")) blank="dsrTerminal.FormTab.Step.Select.Blank"
           localize=true}}
         </select>
       </div>
       <div class="form-group">
-        <label>{{localize "dsrTermminal.FormTab.Step.Attribute.Label"}}</label>
+        <label>{{localize "dsrTerminal.FormTab.Step.Attribute.Label"}}</label>
         <select name="step{{s}}Attribute">
-          {{selectOptions ../attributes selected=(lookup ../formData (concat "step" s "Attribute")) blank="dsrTermminal.FormTab.Step.Select.Blank"
+          {{selectOptions ../attributes selected=(lookup ../formData (concat "step" s "Attribute")) blank="dsrTerminal.FormTab.Step.Select.Blank"
           localize=true}}
         </select>
       </div>
       <div class="form-group">
-        <label>{{localize "dsrTermminal.FormTab.Step.DN.Label"}}</label>
+        <label>{{localize "dsrTerminal.FormTab.Step.DN.Label"}}</label>
         <select name="step{{s}}DN">
           {{selectOptions ../dnOptions selected=(lookup ../formData (concat "step" s "DN")) localize=true}}
         </select>
       </div>
       <div class="form-group">
-        <label>{{localize "dsrTermminal.FormTab.Step.Description.Label"}}</label>
+        <label>{{localize "dsrTerminal.FormTab.Step.Description.Label"}}</label>
         <input name="step{{s}}Description" type="text" value="{{lookup ../formData (concat "step" s "Description")}}" />
       </div>
       <div class="form-group checkbox-group">
         <input id="step{{s}}UnskillUse" name="step{{s}}UnskillUse" type="checkbox" {{checked (lookup ../formData (concat "step" s "UnskillUse" ))}}>
-        <label for="step{{s}}UnskillUse">{{localize "dsrTermminal.FormTab.Step.Unskilled.Label"}}</label>
+        <label for="step{{s}}UnskillUse">{{localize "dsrTerminal.FormTab.Step.Unskilled.Label"}}</label>
       </div>
     </div>
   </div>
@@ -49,35 +49,35 @@
 
   <!-- [ LAST DITCH EFFORT ] -->
   <div class="dsr-step-block lde-block">
-    <div class="step-label" style="color: #856704;">[ {{localize "dsrTermminal.LDE"}} ]</div>
+    <div class="step-label" style="color: #856704;">[ {{localize "dsrTerminal.LDE"}} ]</div>
 
     <div class="form-group-stacked">
-      <label>{{localize "dsrTermminal.FormTab.LDE.Description.Label"}}</label>
+      <label>{{localize "dsrTerminal.FormTab.LDE.Description.Label"}}</label>
       <textarea class="lde-desc" name="lastDitchEffortDescription" rows="2"
-        placeholder="{{localize "dsrTermminal.FormTab.LDE.Description.Placeholder"}}">{{formData.lastDitchEffortDescription}}</textarea>
+        placeholder="{{localize "dsrTerminal.FormTab.LDE.Description.Placeholder"}}">{{formData.lastDitchEffortDescription}}</textarea>
     </div>
 
     <div class="grid-2col">
       <div class="form-group">
-        <label>{{localize "dsrTermminal.FormTab.Step.Skill.Label"}}</label>
+        <label>{{localize "dsrTerminal.FormTab.Step.Skill.Label"}}</label>
         <select name="lastDitchEffortSkill">
-          {{selectOptions skills selected=formData.lastDitchEffortSkill blank="dsrTermminal.FormTab.Step.Select.Blank" localize=true}}
+          {{selectOptions skills selected=formData.lastDitchEffortSkill blank="dsrTerminal.FormTab.Step.Select.Blank" localize=true}}
         </select>
       </div>
       <div class="form-group">
-        <label>{{localize "dsrTermminal.FormTab.Step.Attribute.Label"}}</label>
+        <label>{{localize "dsrTerminal.FormTab.Step.Attribute.Label"}}</label>
         <select name="lastDitchEffortAttribute">
-          {{selectOptions attributes selected=formData.lastDitchEffortAttribute blank="dsrTermminal.FormTab.Step.Select.Blank" localize=true}}
+          {{selectOptions attributes selected=formData.lastDitchEffortAttribute blank="dsrTerminal.FormTab.Step.Select.Blank" localize=true}}
         </select>
       </div>
       <div class="form-group">
-        <label>{{localize "dsrTermminal.FormTab.Step.DN.Label"}}</label>
+        <label>{{localize "dsrTerminal.FormTab.Step.DN.Label"}}</label>
         <select name="lastDitchEffortDN">
           {{selectOptions dnOptions selected=formData.lastDitchEffortDN}}
         </select>
       </div>
       <div class="form-group">
-        <label>{{localize "dsrTermminal.FormTab.Step.Description.Label"}}</label>
+        <label>{{localize "dsrTerminal.FormTab.Step.Description.Label"}}</label>
         <input name="lastDitchEffortTestDesc" type="text" value="{{formData.lastDitchEffortTestDesc}}" />
       </div>
     </div>
@@ -85,16 +85,16 @@
     <div class="form-group checkbox-group">
       <input id="lastDitchEffortUnskillUse" name="lastDitchEffortUnskillUse" type="checkbox" {{checked
         formData.lastDitchEffortUnskillUse}}>
-      <label for="lastDitchEffortUnskillUse">{{localize "dsrTermminal.FormTab.Step.Unskilled.Label"}}</label>
+      <label for="lastDitchEffortUnskillUse">{{localize "dsrTerminal.FormTab.Step.Unskilled.Label"}}</label>
     </div>
   </div>
 </form>
 <footer class="form-footer">
-  <button type="button" data-action="broadcast"><i class="fas fa-paper-plane"></i> {{localize "dsrTermminal.FormTab.Btn.Send"}}</button>
+  <button type="button" data-action="broadcast"><i class="fas fa-paper-plane"></i> {{localize "dsrTerminal.FormTab.Btn.Send"}}</button>
   {{#unless formData.fromRestoration}}
-  <button type="button" data-action="archive"><i class="fas fa-file-signature"></i> {{localize "dsrTermminal.FormTab.Btn.Archive"}}</button>
+  <button type="button" data-action="archive"><i class="fas fa-file-signature"></i> {{localize "dsrTerminal.FormTab.Btn.Archive"}}</button>
   {{/unless}}
   {{#if formData.fromRestoration}}
-  <button type="button" data-action="save"><i class="fas fa-save"></i> {{localize "dsrTermminal.FormTab.Btn.Save"}}</button>
+  <button type="button" data-action="save"><i class="fas fa-save"></i> {{localize "dsrTerminal.FormTab.Btn.Save"}}</button>
   {{/if}}
 </footer>

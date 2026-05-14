@@ -1,5 +1,5 @@
 {
-  "dsrTermminal": {
+  "dsrTerminal": {
     "ArchiveTab": {
       "Btn": {
         "Restore": "RESTORE",
@@ -43,7 +43,7 @@
             "12": "Challenging (12)",
             "14": "Hard (14)",
             "16": "Very Hard (16)",
-            "18": "Legendary (18)",
+            "18": "Heroic (18)",
             "20": "Near Impossible (20)"
           }
         },
@@ -75,7 +75,8 @@
     },
     "UiNotification": {
       "Save": "Mission Saved",
-      "Archive": "Mission Archived."
+      "Archive": "Mission Archived.",
+      "Restore": "Mission Restored to Editor"
     },
     "Journal": {
       "MissionID": {
@@ -86,11 +87,11 @@
       }
     },
     "ChatCard": {
-      "ResolutionProtocal": {
+      "ResolutionProtocol": {
         "Label": "RESOLUTION PROTOCOL:"
       },
       "MissionID": {
-        "Label": "MISSION ID:"
+        "Label": "MISSION ID"
       },
       "Step": {
         "Bypassed": "--- PHASE BYPASSED ---"

@@ -1,99 +1,100 @@
 {
-  "dsrTermminal": {
+  "dsrTerminal": {
     "ArchiveTab": {
       "Btn": {
-        "Restore": "RESTORE",
-        "Send": "SEND",
+        "Restore": "RESTAURER",
+        "Send": "ENVOYER",
         "Titles" : {
-          "Restore": "Restore Mission to Editor",
-          "Send": "Send from Archives"
+          "Restore": "Restaurer la Mission vers l'Éditeur",
+          "Send": "Envoyer depuis les Archives"
         }
       },
       "Entry": {
         "Description": "Description"
       }
     },
-    "Bypassed": "BYPASSED",
-    "LDE": "LAST DITCH EFFORT",
+    "Bypassed": "CONTOURNÉ",
+    "LDE": "EFFORT DE LA DERNIÈRE CHANCE",
     "FormTab": {
       "Title": {
-        "Label": "Mission Designation",
-        "Placeholder": "ENTER TITLE..."
+        "Label": "Désignation de la Mission",
+        "Placeholder": "ENTRER LE TITRE..."
       },
       "Description": {
-        "Label": "Situation Briefing"
+        "Label": "Briefing de Situation"
       },
       "Step": {
-        "Label": "STEP",
+        "Label": "ÉTAPE",
         "Description": {
-          "Label": "Objective"
+          "Label": "Objectif"
         },
         "Skill": {
-          "Label": "Skill"
+          "Label": "Compétence"
         },
         "Attribute": {
-          "Label": "Attribute"
+          "Label": "Attribut"
         },
         "DN": {
-          "Label": "DN",
+          "Label": "ND",
           "SelectOptions": {
-            "6": "Very Easy (6)",
-            "8": "Easy (8)",
+            "6": "Très Facile (6)",
+            "8": "Facile (8)",
             "10": "Standard (10)",
-            "12": "Challenging (12)",
-            "14": "Hard (14)",
-            "16": "Very Hard (16)",
-            "18": "Legendary (18)",
-            "20": "Near Impossible (20)"
+            "12": "Complexe (12)",
+            "14": "Difficile (14)",
+            "16": "Très Difficile (16)",
+            "18": "Héroïque (18)",
+            "20": "Presque Impossible (20)"
           }
         },
         "Unskilled": {
-          "Label": "Unskilled Use"
+          "Label": "Usage Incompétent"
         },
         "Select": {
-          "Blank": "-- NONE --"
+          "Blank": "-- AUCUN --"
         }
       },
       "LDE": {
         "Description": {
-          "Label": "Contingency Plan Description",
-          "Placeholder": "Contingency Plan Description"
+          "Label": "Description du Plan de Secours",
+          "Placeholder": "Description du Plan de Secours"
         }
       },
       "Btn": {
-        "Send": "SEND",
-        "Archive": "ARCHIVE",
-        "Save": "SAVE"
+        "Send": "ENVOYER",
+        "Archive": "ARCHIVER",
+        "Save": "SAUVEGARDER"
       }
     },
-    "Title": "Delphi Council Intelligence Terminal",
+    "Title": "Terminal de Renseignement du Conseil de Delphes",
     "Tabs": {
       "Form": {
-        "Title": "Mission Editor",
-        "Archives": "Mission Archives"
+        "Title": "Éditeur de Mission",
+        "Archives": "Archives de Mission"
       }
     },
     "UiNotification": {
-      "Save": "Mission Saved",
-      "Archive": "Mission Archived."
+      "Save": "Mission Sauvegardée",
+      "Archive": "Mission Archivée.",
+      "Restore": "Mission Restaurée dans l'Éditeur"
     },
     "Journal": {
       "MissionID": {
-        "NotFound": "MISSION_ID_NOT_FOUND"
+        "NotFound": "ID_MISSION_INTROUVABLE"
       },
       "MissionTitle": {
-        "Default": "Dramatic Skill Resolution"
+        "Default": "Résolution Dramatique de Tâches"
       }
     },
     "ChatCard": {
-      "ResolutionProtocal": {
-        "Label": "RESOLUTION PROTOCOL:"
+      "ResolutionProtocol": {
+        "Label": "PROTOCOLE DE RÉSOLUTION :"
       },
       "MissionID": {
-        "Label": "MISSION ID:"
+        "Label": "ID DE MISSION "
       },
       "Step": {
-        "Bypassed": "--- PHASE BYPASSED ---"
+        "Bypassed": "--- PHASE CONTOURNÉE ---"
       }
     }
   }
