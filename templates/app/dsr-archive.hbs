@@ -7,24 +7,24 @@
         <span class="mission-title">{{e.title}}</span>
       </div>
       <div class="dsr-archive-action-container">
-        <button type="button" class="dsr-restore-btn" data-page-id="{{e.id}}" title="Restore to Editor"
+        <button type="button" class="dsr-restore-btn" data-page-id="{{e.id}}" title="{{localize "dsrTermminal.ArchiveTab.Btn.Titles.Restore"}}"
           data-action="restore">
-          <i class="fas fa-file-import"></i> RESTORE
+          <i class="fas fa-file-import"></i> {{localize "dsrTermminal.ArchiveTab.Btn.Restore"}}
         </button>
-        <button type="button" class="dsr-restore-btn" data-page-id="{{e.id}}" title="Send from Archive"
+        <button type="button" class="dsr-restore-btn" data-page-id="{{e.id}}" title="{{localize "dsrTermminal.ArchiveTab.Btn.Titles.Send"}}"
           data-action="sendFromArchive">
-          <i class="fas fa-send"></i> SEND
+          <i class="fas fa-send"></i> {{localize "dsrTermminal.ArchiveTab.Btn.Send"}}
         </button>
       </div>
     </div>
     <div class="dsr-archive-step dsr-archive-description">
-      <div class="step-label">Description</div>
+      <div class="step-label">{{localize "dsrTermminal.ArchiveTab.Entry.Description"}}</div>
       <div class="dsr-decription-content">{{e.description}}</div>
     </div>
     <div class="dsr-steps-grid">
       {{#each e.steps as |s|}}
-      <div class="dsr-archive-step {{#if (eq s.summary 'BYPASSED')}}is-bypassed{{/if}}">
-        <div class="step-label">STEP {{s.label}}</div>
+      <div class="dsr-archive-step {{#if s.bypassed}}is-bypassed{{/if}}">
+        <div class="step-label">{{localize "dsrTermminal.FormTab.Step.Label"}} {{s.label}}</div>
         <div class="step-summary">{{s.summary}}</div>
         {{#if s.details}}<div class="step-details">{{s.details}}</div>{{/if}}
       </div>
@@ -33,7 +33,7 @@
 
     {{#if e.lde}}
     <div class="dsr-archive-lde">
-      <div class="lde-tag">[ LAST DITCH EFFORT ]</div>
+      <div class="lde-tag">[ {{localize "dsrTermminal.LDE"}} ]</div>
       <div class="lde-content">
         <div class="lde-description">{{e.lde.description}}</div>
         <div class="lde-summary">{{e.lde.summary}}</div>
