@@ -11,12 +11,12 @@ Hooks.once("init", async () => {
     "modules/torg-eternity-dsr-terminal/templates/app/dsr-archive.hbs",
     "modules/torg-eternity-dsr-terminal/templates/chatcard/dsr-chat-card.hbs",
   ];
-  await loadTemplates(templatePaths);
-  
+  await foundry.applications.handlebars.loadTemplates(templatePaths);
   console.log("DSR Terminal | Templates Loaded and Partials Registered");
 });
 
 Hooks.once('preRenderTorgControlButtons', (app, context, options) => {
+  if(!game.user.isGM) return
   const { buttons } = context 
   const dsrButton = {
     name: 'dsrTerminal',
@@ -30,6 +30,7 @@ Hooks.once('preRenderTorgControlButtons', (app, context, options) => {
 });
 
 Hooks.on('renderTorgControlButtons', (app, html) => {
+    if(!game.user.isGM) return
     //v13 specific block since there is no preRenderApplicationV2 hook
     if(!hasPrerendered){
       const body = html.querySelector('div[data-application-part="body"]')
