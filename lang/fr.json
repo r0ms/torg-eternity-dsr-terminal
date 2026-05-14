@@ -5,7 +5,7 @@
         "Restore": "RESTAURER",
         "Send": "ENVOYER",
         "Titles" : {
-          "Restore": "Restaurer la Mission vers l'Éditeur",
+          "Restore": "Restaurer la mission vers l'Éditeur",
           "Send": "Envoyer depuis les Archives"
         }
       },
@@ -13,15 +13,15 @@
         "Description": "Description"
       }
     },
-    "Bypassed": "CONTOURNÉ",
-    "LDE": "EFFORT DE LA DERNIÈRE CHANCE",
+    "Bypassed": "CONTOURNÉE",
+    "LDE": "ULTIME TENTATIVE",
     "FormTab": {
       "Title": {
         "Label": "Désignation de la Mission",
         "Placeholder": "ENTRER LE TITRE..."
       },
       "Description": {
-        "Label": "Briefing de Situation"
+        "Label": "Briefing de situation"
       },
       "Step": {
         "Label": "ÉTAPE",
@@ -56,8 +56,8 @@
       },
       "LDE": {
         "Description": {
-          "Label": "Description du Plan de Secours",
-          "Placeholder": "Description du Plan de Secours"
+          "Label": "Description de l'Ultime Tentative",
+          "Placeholder": "Description de l'Ultime Tentative"
         }
       },
       "Btn": {
@@ -66,29 +66,29 @@
         "Save": "SAUVEGARDER"
       }
     },
-    "Title": "Terminal de Renseignement du Conseil de Delphes",
+    "Title": "Terminal du Renseignement du Conseil de Delphes",
     "Tabs": {
       "Form": {
         "Title": "Éditeur de Mission",
-        "Archives": "Archives de Mission"
+        "Archives": "Archives de Missions"
       }
     },
     "UiNotification": {
-      "Save": "Mission Sauvegardée",
-      "Archive": "Mission Archivée.",
-      "Restore": "Mission Restaurée dans l'Éditeur"
+      "Save": "Mission sauvegardée",
+      "Archive": "Mission archivée.",
+      "Restore": "Mission restaurée dans l'Éditeur"
     },
     "Journal": {
       "MissionID": {
-        "NotFound": "ID_MISSION_INTROUVABLE"
+        "NotFound": "IDENTIFIANT_MISSION_INTROUVABLE"
       },
       "MissionTitle": {
-        "Default": "Résolution Dramatique de Tâches"
+        "Default": "Résolution Dramatique d'une Tâches"
       }
     },
     "ChatCard": {
       "ResolutionProtocol": {
-        "Label": "PROTOCOLE DE RÉSOLUTION :"
+        "Label": "RÉSOLUTION :"
       },
       "MissionID": {
         "Label": "ID DE MISSION "
