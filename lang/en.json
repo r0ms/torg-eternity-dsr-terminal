@@ -1,1 +1,101 @@
-{}
+{
+  "dsrTerminal": {
+    "ArchiveTab": {
+      "Btn": {
+        "Restore": "RESTORE",
+        "Send": "SEND",
+        "Titles" : {
+          "Restore": "Restore Mission to Editor",
+          "Send": "Send from Archives"
+        }
+      },
+      "Entry": {
+        "Description": "Description"
+      }
+    },
+    "Bypassed": "BYPASSED",
+    "LDE": "LAST DITCH EFFORT",
+    "FormTab": {
+      "Title": {
+        "Label": "Mission Designation",
+        "Placeholder": "ENTER TITLE..."
+      },
+      "Description": {
+        "Label": "Situation Briefing"
+      },
+      "Step": {
+        "Label": "STEP",
+        "Description": {
+          "Label": "Objective"
+        },
+        "Skill": {
+          "Label": "Skill"
+        },
+        "Attribute": {
+          "Label": "Attribute"
+        },
+        "DN": {
+          "Label": "DN",
+          "SelectOptions": {
+            "6": "Very Easy (6)",
+            "8": "Easy (8)",
+            "10": "Standard (10)",
+            "12": "Challenging (12)",
+            "14": "Hard (14)",
+            "16": "Very Hard (16)",
+            "18": "Heroic (18)",
+            "20": "Near Impossible (20)"
+          }
+        },
+        "Unskilled": {
+          "Label": "Unskilled Use"
+        },
+        "Select": {
+          "Blank": "-- NONE --"
+        }
+      },
+      "LDE": {
+        "Description": {
+          "Label": "Contingency Plan Description",
+          "Placeholder": "Contingency Plan Description"
+        }
+      },
+      "Btn": {
+        "Send": "SEND",
+        "Archive": "ARCHIVE",
+        "Save": "SAVE"
+      }
+    },
+    "Title": "Delphi Council Intelligence Terminal",
+    "Tabs": {
+      "Form": {
+        "Title": "Mission Editor",
+        "Archives": "Mission Archives"
+      }
+    },
+    "UiNotification": {
+      "Save": "Mission Saved",
+      "Archive": "Mission Archived.",
+      "Restore": "Mission Restored to Editor"
+    },
+    "Journal": {
+      "MissionID": {
+        "NotFound": "MISSION_ID_NOT_FOUND"
+      },
+      "MissionTitle": {
+        "Default": "Dramatic Skill Resolution"
+      }
+    },
+    "ChatCard": {
+      "ResolutionProtocol": {
+        "Label": "RESOLUTION PROTOCOL:"
+      },
+      "MissionID": {
+        "Label": "MISSION ID"
+      },
+      "Step": {
+        "Bypassed": "--- PHASE BYPASSED ---"
+      }
+    }
+  }
+}

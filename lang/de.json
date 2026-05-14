@@ -1,0 +1,101 @@
+{
+  "dsrTerminal": {
+    "ArchiveTab": {
+      "Btn": {
+        "Restore": "WIEDERHERSTELLEN",
+        "Send": "SENDEN",
+        "Titles" : {
+          "Restore": "Mission im Editor wiederherstellen",
+          "Send": "Aus dem Archiv senden"
+        }
+      },
+      "Entry": {
+        "Description": "Beschreibung"
+      }
+    },
+    "Bypassed": "ÜBERGANGEN",
+    "LDE": "VERZWEIFELTER LETZTER VERSUCH",
+    "FormTab": {
+      "Title": {
+        "Label": "Missionsbezeichnung",
+        "Placeholder": "TITEL EINGEBEN..."
+      },
+      "Description": {
+        "Label": "Lagebesprechung"
+      },
+      "Step": {
+        "Label": "SCHRITT",
+        "Description": {
+          "Label": "Missionsziel"
+        },
+        "Skill": {
+          "Label": "Fertigkeit"
+        },
+        "Attribute": {
+          "Label": "Attribut"
+        },
+        "DN": {
+          "Label": "MW",
+          "SelectOptions": {
+            "6": "Sehr Einfach (6)",
+            "8": "Einfach (8)",
+            "10": "Standard (10)",
+            "12": "Anspruchsvoll (12)",
+            "14": "Schwer (14)",
+            "16": "Sehr Schwer (16)",
+            "18": "Heroisch (18)",
+            "20": "Nahezu Unmöglich (20)"
+          }
+        },
+        "Unskilled": {
+          "Label": "Ungelernt"
+        },
+        "Select": {
+          "Blank": "-- KEIN --"
+        }
+      },
+      "LDE": {
+        "Description": {
+          "Label": "Beschreibung des Notfallplans",
+          "Placeholder": "Beschreibung des Notfallplans"
+        }
+      },
+      "Btn": {
+        "Send": "SENDEN",
+        "Archive": "ARCHIVIEREN",
+        "Save": "SPEICHERN"
+      }
+    },
+    "Title": "Geheimdienst-Terminal des Delphi-Rats",
+    "Tabs": {
+      "Form": {
+        "Title": "Missions-Editor",
+        "Archives": "Missions-Archiv"
+      }
+    },
+    "UiNotification": {
+      "Save": "Mission gespeichert",
+      "Archive": "Mission archiviert.",
+      "Restore": "Mission im Editor wiederhergestellt"
+    },
+    "Journal": {
+      "MissionID": {
+        "NotFound": "MISSIONS_ID_NICHT_GEFUNDEN"
+      },
+      "MissionTitle": {
+        "Default": "Dramatische Fertigkeitsausführung"
+      }
+    },
+    "ChatCard": {
+      "ResolutionProtocol": {
+        "Label": "PROTOKOLL DER AUSFÜHRUNG:"
+      },
+      "MissionID": {
+        "Label": "MISSIONS-ID"
+      },
+      "Step": {
+        "Bypassed": "--- PHASE ÜBERGANGEN ---"
+      }
+    }
+  }
+}

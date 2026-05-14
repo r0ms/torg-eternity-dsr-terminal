@@ -3,21 +3,21 @@
   <header style="text-align: center; border-bottom: 2px solid #333; margin-bottom: 10px; padding-bottom: 5px;">
     <h2 style="color: #856704; margin: 0; text-transform: uppercase; font-weight: 900; font-size: 1.2rem;">{{title}}
     </h2>
-    <div style="font-size: 0.6rem; color: #666; font-weight: bold;">MISSION ID: {{missionId}}</div>
+    <div style="font-size: 0.6rem; color: #666; font-weight: bold;">{{localize "dsrTerminal.ChatCard.MissionID.Label"}}: {{missionId}}</div>
   </header>
 
   <div class="dsr-description" style="font-size: 0.95rem; margin-bottom: 15px;">
     {{{description}}}
   </div>
 
-  <div style="font-weight: 900; color: #856704; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px;">DSR Resolution Protocol:</div>
+  <div style="font-weight: 900; color: #856704; font-size: 0.75rem; text-transform: uppercase; margin-bottom: 12px;">{{localize "dsrTerminal.ChatCard.ResolutionProtocol.Label"}}</div>
 
   <div style="padding-left: 10px; border-left: 3px solid #856704;">
     {{#each steps as |s|}}
     <div style="display:flex; align-items: center; gap:10px; margin-bottom: 10px;" data-step="{{s.letter}}">
       <img src="/systems/torgeternity/images/tokens/step_{{s.letter}}.webp" width="56" height="30" style="border:none;">
       <div style="flex: 1; font-size: 0.9rem;">
-        {{#if s.enricher}}{{{s.enricher}}}{{else}}--- PHASE BYPASSED ---{{/if}}
+        {{#if s.enricher}}{{{s.enricher}}}{{else}}{{localize "dsrTerminal.ChatCard.Step.Bypassed"}}{{/if}}
       </div>
     </div>
     {{/each}}
@@ -25,7 +25,7 @@
 
   {{#if lde}}
   <div style="margin-top: 15px; padding: 10px; background: rgba(0,0,0,0.05); border: 1px dashed #333;" data-step="lde">
-    <div style="font-weight: 900; font-size: 0.7rem; color: #856704;">[ LAST DITCH EFFORT ]</div>
+    <div style="font-weight: 900; font-size: 0.7rem; color: #856704;">[ {{localize "dsrTerminal.LDE"}} ]</div>
     {{#if lde.text}}<p style="margin: 5px 0; font-style: italic;">{{lde.text}}</p>{{/if}}
     <div>{{{lde.enricher}}}</div>
   </div>
