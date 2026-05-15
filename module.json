@@ -43,12 +43,6 @@
       "name": "French",
       "path": "lang/fr.json",
       "flags": {}
-    },
-    {
-      "lang": "de",
-      "name": "German",
-      "path": "lang/de.json",
-      "flags": {}
     }
   ],
   "styles": [
