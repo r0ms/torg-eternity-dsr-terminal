@@ -38,3 +38,10 @@ jobs:
         artifacts: './module.json, ./module.zip'
         tag: ${{ github.event.release.tag_name }}
         body: ${{ github.event.release.body }}
+
+    # Update foundryvtt.com with the new release details
+    - name: Deploy Release
+      run: npx @ghost-fvtt/foundry-publish
+      env:
+        FVTT_TOKEN: ${{ secrets.FOUNDRY_PACKAGE_DEPLOY_KEY }}
+        FVTT_MANIFEST_PATH:  ./module.json
