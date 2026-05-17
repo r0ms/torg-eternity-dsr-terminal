@@ -1,10 +1,10 @@
 {
   "id": "torg-eternity-dsr-terminal",
   "title": "Torg Eternity DSR Terminal",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "compatibility": {
     "minimum": "13",
-    "verified": "13",
+    "verified": "14",
     "maximum": "14"
   },
   "authors": [
@@ -26,7 +26,6 @@
       }
     ]
   },
-  "action": "manageModule",
   "esmodules": [
     "torg-enternity-dsr-terminal.js"
   ],  
